@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+</head>
+<body>
+
+    <button onclick="addParameter()">Click me</button>
+
+    <script>
+        function addParameter() {
+            // Get the current URL
+            var currentUrl = window.location.href;
+
+            // Check if the URL already contains a path
+            var separator = currentUrl.endsWith('/') ? '' : '/';
+
+            // Add the '/test' parameter to the URL
+            var newUrl = currentUrl + separator + 'test';
+
+            // Redirect to the new URL
+            window.location.href = newUrl;
+        }
+    </script>
+
+</body>
+</html>
